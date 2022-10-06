@@ -1,6 +1,8 @@
 ### Slowly-Grokking is bit of a bodger.
 ### real credit goes to those that have done the work before me
 
+I am adding more fidelity to animation settings per prompt
+I will also be focusing on quality of life features to make long form generations more feasible and coherent.
 
 
 <br>
