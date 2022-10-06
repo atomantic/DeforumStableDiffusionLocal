@@ -1,3 +1,7 @@
+Slowly-Grokking is bit of a bodger.
+real credit goes to those that have done the work before me
+
+
 [![Deforum Stable Diffusion](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/deforum/stable-diffusion/blob/main/Deforum_Stable_Diffusion.ipynb)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=deforum_sd_local_repo)
 [![Replicate](https://replicate.com/deforum/deforum_stable_diffusion/badge)](https://replicate.com/deforum/deforum_stable_diffusion)
