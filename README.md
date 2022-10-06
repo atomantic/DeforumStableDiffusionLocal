@@ -7,19 +7,9 @@
 <br>
 
 
-
+- **this repo forked from [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
 - **Local Version by [DGSpitzer](https://www.youtube.com/channel/UCzzsYBF4qwtMwJaPJZ5SuPg) [大谷的游戏创作小屋](https://space.bilibili.com/176003)**
 - **Special Thanks to [VIVY Has A Dream](https://github.com/vivyhasadream) for all the help!**
-
-
-![example](examples/example1.gif)
-![example](examples/example2.gif)
-![example](examples/example3.gif)
-
-**👇Animated Video👇**
-
-[![example video](https://img.youtube.com/vi/DCJm61yQ4_g/0.jpg)](https://www.youtube.com/watch?v=DCJm61yQ4_g)
-
 
 Made this quick local Windows version mostly based on the Colab code by deforum, which supports very cool turbo mode animation output for Stable Diffusion!
 
@@ -52,26 +42,11 @@ python setup.py
 
 
 ## How to use it?
-The running command should looks like this:
-```
-python run.py --enable_animation_mode --settings "./runSettings_Template.txt"
-```
-
-After installation you can try out following examples to see if the code is working
-- 1. For generate still images:
-```
-python run.py --settings "./examples/runSettings_StillImages.txt"
-```
-- 2. For animation feature, you need to add `--enable_animation_mode` to enable animation settings in text file:
+For more info go see [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
+I only use this command at the moment:
 ```
 python run.py --enable_animation_mode --settings "./examples/runSettings_Animation.txt"
 ```
-- 3. For mask feature:
-```
-python run.py --settings "./examples/runSettings_Mask.txt"
-```
-![example](examples/MaskExampleDisplay.png)
-[Original Painting on Artstation](https://www.artstation.com/artwork/yVyG3)
 
 **The output results will be available at `./output` folder.**
 
