@@ -1,17 +1,12 @@
-Slowly-Grokking is bit of a bodger.
-real credit goes to those that have done the work before me
+### Slowly-Grokking is bit of a bodger.
+### real credit goes to those that have done the work before me
 
 
-[![Deforum Stable Diffusion](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/deforum/stable-diffusion/blob/main/Deforum_Stable_Diffusion.ipynb)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=deforum_sd_local_repo)
-[![Replicate](https://replicate.com/deforum/deforum_stable_diffusion/badge)](https://replicate.com/deforum/deforum_stable_diffusion)
 
-# Deforum Stable Diffusion Local Version
-Local version of Deforum Stable Diffusion V0.4, supports txt settings file input and animation features!
+<br>
+<br>
 
-- **[Stable Diffusion](https://github.com/CompVis/stable-diffusion) by Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer and the [Stability.ai](https://stability.ai/) Team.**
-- **[K Diffusion](https://github.com/crowsonkb/k-diffusion) by [Katherine Crowson](https://twitter.com/RiversHaveWings).** 
-- **Notebook by [deforum](https://discord.com/invite/upmXXsrwZc)**
+
 
 - **Local Version by [DGSpitzer](https://www.youtube.com/channel/UCzzsYBF4qwtMwJaPJZ5SuPg) [大谷的游戏创作小屋](https://space.bilibili.com/176003)**
 - **Special Thanks to [VIVY Has A Dream](https://github.com/vivyhasadream) for all the help!**
