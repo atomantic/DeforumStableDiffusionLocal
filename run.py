@@ -5,6 +5,9 @@
 #Local Version by DGSpitzer 大谷的游戏创作小屋
 
 import os, time
+runs = 0
+n_batch = 1
+multi = False
 def get_output_folder(output_path, batch_folder):
     out_path = os.path.join(output_path,time.strftime('%Y-%m'))
     if batch_folder != "":
@@ -785,6 +788,7 @@ def main():
         display_samples = True #@param {type:"boolean"}
 
         #@markdown **Batch Settings**
+        global n_batch
         n_batch = master_args["n_batch"]  #@param
         batch_name = master_args["batch_name"] #@param {type:"string"}
         filename_format = master_args["filename_format"] #@param ["{timestring}_{index}_{seed}.png","{timestring}_{index}_{prompt}.png"]
@@ -1262,6 +1266,8 @@ def main():
     # dispatch to appropriate renderer
     if anim_args.animation_mode == '2D' or anim_args.animation_mode == '3D':
         render_animation(args, anim_args)
+        global multi
+        multi = True
     elif anim_args.animation_mode == 'Video Input':
         render_input_video(args, anim_args)
     elif anim_args.animation_mode == 'Interpolation':
@@ -1326,3 +1332,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+    if (n_batch >= runs) and multi:
+        runs=runs+1
+        main()
+    else:
+        print(f"we probably created {runs} mp4s")
