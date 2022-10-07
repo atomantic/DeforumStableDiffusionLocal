@@ -1,4 +1,6 @@
 ### Slowly-Grokking is bit of a bodger.
+I don't know the best way to do anything or how to contribute to other's projects in an effective way,
+but I am more than happy to help if I can.   
 ### real credit goes to those that have done the work before me
 
 Features added:
