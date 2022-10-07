@@ -53,7 +53,7 @@ python setup.py
 For more info go see [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
 I only use this command at the moment:
 ```
-python run.py --enable_animation_mode --settings "./examples/runSettings_Animation.txt"
+python run.py --enable_animation_mode --settings runSettings_Template.txt
 ```
 
 **The output results will be available at `./output` folder.**
