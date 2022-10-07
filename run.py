@@ -6,16 +6,15 @@
 
 import os, time
 runs = 0
+multi = 1
 n_batch = 1
-multi = False
 def get_output_folder(output_path, batch_folder):
     out_path = os.path.join(output_path,time.strftime('%Y-%m'))
     if batch_folder != "":
         out_path = os.path.join(out_path, batch_folder)
     os.makedirs(out_path, exist_ok=True)
     return out_path
-
-
+    
 def main():
 
     import argparse
@@ -1267,7 +1266,7 @@ def main():
     if anim_args.animation_mode == '2D' or anim_args.animation_mode == '3D':
         render_animation(args, anim_args)
         global multi
-        multi = True
+        multi = n_batch
     elif anim_args.animation_mode == 'Video Input':
         render_input_video(args, anim_args)
     elif anim_args.animation_mode == 'Interpolation':
@@ -1332,8 +1331,9 @@ def main():
         print(f"we probably created {runs} mp4s")
         #display.display( display.HTML(f'<video controls loop><source src="{data_url}" type="video/mp4"></video>') )
 
+def batch_videos():
+    while (runs < multi):
+        main()
 
 if __name__ == "__main__":
-    main()
-    if (n_batch >= runs) and multi:
-        main()
+    batch_videos()
