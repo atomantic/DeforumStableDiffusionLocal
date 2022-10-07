@@ -1327,13 +1327,13 @@ def main():
 
         mp4 = open(mp4_path,'rb').read()
         data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
-        display.display( display.HTML(f'<video controls loop><source src="{data_url}" type="video/mp4"></video>') )
+        global runs
+        runs=runs+1
+        print(f"we probably created {runs} mp4s")
+        #display.display( display.HTML(f'<video controls loop><source src="{data_url}" type="video/mp4"></video>') )
 
 
 if __name__ == "__main__":
     main()
     if (n_batch >= runs) and multi:
-        runs=runs+1
         main()
-    else:
-        print(f"we probably created {runs} mp4s")
