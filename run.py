@@ -1335,5 +1335,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    if (n_batch >= runs) and multi:
+    if (n_batch <= runs) and multi:
         main()
