@@ -1,8 +1,13 @@
 ### Slowly-Grokking is bit of a bodger.
 ### real credit goes to those that have done the work before me
 
-I am adding more fidelity to animation settings per prompt.
-
+Features added:
+```
+-set FPS via settings file ("fps": 12,)
+-Adjust Strength_schedule per frame in 2D/3D animations {"36": 0.65,}
+-now creates 'n_batch' renders in 2D/3D  (remember to have random seed -1)
+-added audio to video output "audio_path"
+```
 I will also be focusing on quality of life features to make long form generations more feasible and coherent.
 
 
