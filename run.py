@@ -871,7 +871,7 @@ def main():
             init_array = [""]
 
         # when doing large batches don't flood browser with images
-        clear_between_batches = args.n_batch >= 32
+        clear_between_batches = n_batch >= 32
 
         for iprompt, prompt in enumerate(prompts):  
             args.prompt = prompt
@@ -880,10 +880,10 @@ def main():
           
             all_images = []
 
-            for batch_index in range(args.n_batch):
+            for batch_index in range(n_batch):
                 if clear_between_batches and batch_index % 32 == 0: 
                     display.clear_output(wait=True)            
-                print(f"Batch {batch_index+1} of {args.n_batch}")
+                print(f"Batch {batch_index+1} of {n_batch}")
                 
                 for image in init_array: # iterates the init images
                     args.init_image = image
