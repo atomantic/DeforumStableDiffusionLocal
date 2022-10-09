@@ -1272,6 +1272,7 @@ def main():
     elif anim_args.animation_mode == 'Interpolation':
         render_interpolation(args, anim_args)
     else:
+        multi = 0
         render_image_batch(args)    
 
 
