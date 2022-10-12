@@ -754,6 +754,7 @@ def main():
 
     #Replace by text file
     prompts = master_args["prompts"]
+    anim_set_on = master_args["anim_set_on"]
     anim_settings = master_args["anim_settings"]
 
     if opt.enable_animation_mode:
@@ -916,6 +917,7 @@ def main():
     def render_animation(args, anim_args):
         # animations use key framed prompts
         args.prompts = animation_prompts
+        args.anim_set_on = anim_set_on
         args.anim_settings = anim_settings
 
         # expand key frame strings to values
@@ -999,7 +1001,11 @@ def main():
         while frame_idx < anim_args.max_frames:
             print(f"Rendering animation frame {frame_idx} of {anim_args.max_frames}")
             noise = keys.noise_schedule_series[frame_idx]
-            strength = max(0.0, min(1.0, settings_series[frame_idx]))
+            if (anim_set_on):
+                strength = max(0.0, min(1.0, settings_series[frame_idx]))
+            else:
+                strength = keys.strength_schedule_series[frame_idx]
+                print(strength)
             contrast = keys.contrast_schedule_series[frame_idx]
             depth = None
             
@@ -1074,7 +1080,7 @@ def main():
             args.prompt = prompt_series[frame_idx]
             print(f"{args.prompt} {args.seed}")
             
-              # grab prompt for current frame
+            # grab prompt for current frame
             args.anim_settings = settings_series[frame_idx]
             print(f"{args.anim_settings} {args.seed}")
 
