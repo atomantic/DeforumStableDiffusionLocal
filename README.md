@@ -1,6 +1,6 @@
 ### Slowly-Grokking is bit of a bodger.
 I don't know the best way to do anything or how to contribute to other's projects in an effective way,
-but I am more than happy to help if I can.   
+but I am more than happy to help if I can.
 ### real credit goes to those that have done the work before me
 
 Features added:
@@ -10,7 +10,28 @@ Features added:
 -now creates 'n_batch' renders in 2D/3D  (remember to have random seed -1)
 -added audio to video output "audio_path"
 ```
-I will also be focusing on quality of life features to make long form generations more feasible and coherent.
+
+ToDo:
+```
+-Add other settings to Anim_settings
+-Add FPS/Prompt Frame math (autoscale promptFrames upon fps adjustment, or allow seconds to be input intead of frames)
+-Add cycle/pattern support for anim_settings and prompts (loop through prompts)
+-Seed previews for arbitary frames
+-Enable animation prompts to reinit between scenes (generating each prompt individually) or at will
+-WebUI
+-discord/other remote CC
+-Masking and remasking
+-img2txt -> init -> txt2img
+-Seed/preset saving.
+-advanced img2img
+-whisper, gpt3, CLIP... you see the future?
+```
+I will be focusing on quality of life features to make long form generations more feasible and coherent.
+(D)SD is already capable, but creating complex works is tedious.  The main objective here is to simplify the workflow and save time.
+SD is amazing, but we still have more ideas than we could create in a lifetime.  I aim to add more than just SD to this toolset, and enable
+quality, longer-form content to be produced in a time-friendly manner.  The goal is add more intentionality to generated art to allow our imaginations to shine
+moreso than the randomly-generated, low-effort content currently flooding the world.
+
 
 
 <br>
