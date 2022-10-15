@@ -1,9 +1,12 @@
 ### Slowly-Grokking is bit of a bodger.
+
 I don't know the best way to do anything or how to contribute to other's projects in an effective way,
 but I am more than happy to help if I can.
+
 ### real credit goes to those that have done the work before me
 
 Features added:
+
 ```
 -set FPS via settings file ("fps": 12,)
 -Adjust Strength_schedule per frame in 2D/3D animations {"36": 0.65,}
@@ -12,6 +15,7 @@ Features added:
 ```
 
 ToDo:
+
 ```
 -Add other settings to Anim_settings
 -Add FPS/Prompt Frame math (autoscale promptFrames upon fps adjustment, or allow seconds to be input intead of frames)
@@ -26,19 +30,17 @@ ToDo:
 -advanced img2img
 -whisper, gpt3, CLIP... you see the future?
 ```
+
 I will be focusing on quality of life features to make long form generations more feasible and coherent.
-(D)SD is already capable, but creating complex works is tedious.  The main objective here is to simplify the workflow and save time.
-SD is amazing, but we still have more ideas than we could create in a lifetime.  I aim to add more than just SD to this toolset, and enable
-quality, longer-form content to be produced in a time-friendly manner.  The goal is add more intentionality to generated art to allow our imaginations to shine
+(D)SD is already capable, but creating complex works is tedious. The main objective here is to simplify the workflow and save time.
+SD is amazing, but we still have more ideas than we could create in a lifetime. I aim to add more than just SD to this toolset, and enable
+quality, longer-form content to be produced in a time-friendly manner. The goal is add more intentionality to generated art to allow our imaginations to shine
 moreso than the randomly-generated, low-effort content currently flooding the world.
 
-
-
 <br>
 <br>
 
-
-- **this repo forked from [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
+- \*\*this repo forked from [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
 - **Local Version by [DGSpitzer](https://www.youtube.com/channel/UCzzsYBF4qwtMwJaPJZ5SuPg) [大谷的游戏创作小屋](https://space.bilibili.com/176003)**
 - **Special Thanks to [VIVY Has A Dream](https://github.com/vivyhasadream) for all the help!**
 
@@ -71,17 +73,17 @@ python setup.py
 
 **There should be another extra file `AdaBins_nyu.pt` which should be downloaded into `./pretrained` folder, [the download link is here](https://cloudflare-ipfs.com/ipfs/Qmd2mMnDLWePKmgfS8m6ntAg4nhV5VkUyAydYBp8cWWeB7/AdaBins_nyu.pt)**
 
-
 ## How to use it?
+
 For more info go see [HelixNGC7293](https://github.com/HelixNGC7293/DeforumStableDiffusionLocal)
 I only use this command at the moment:
+
 ```
-python run.py --enable_animation_mode --settings runSettings_Template.txt
+python run.py --enable_animation_mode --settings runSettings_Template.json
 ```
 
 **The output results will be available at `./output` folder.**
 
-All the needed variables & prompts for Deforum Stable Diffusion are set in the txt file (You can refer to the [Colab](https://colab.research.google.com/github/deforum/stable-diffusion/blob/main/Deforum_Stable_Diffusion.ipynb) page for definition of all the variables), you can have many of settings files for different tasks. There is a template file called `runSettings_Template.txt`. You can create your own txt settings file as well.
+All the needed variables & prompts for Deforum Stable Diffusion are set in the txt file (You can refer to the [Colab](https://colab.research.google.com/github/deforum/stable-diffusion/blob/main/Deforum_Stable_Diffusion.ipynb) page for definition of all the variables), you can have many of settings files for different tasks. There is a template file called `runSettings_Template.json`. You can create your own txt settings file as well.
 
-
-That's it! 
+That's it!
