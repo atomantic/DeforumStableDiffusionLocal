@@ -779,7 +779,9 @@ def main():
         ddim_eta = master_args["ddim_eta"] #@param
         dynamic_threshold = None
         static_threshold = None
-        audio_path = master_args["audio_path"]
+        audio_path = None
+        if master_args["audio_path"]:
+            audio_path = master_args["audio_path"]
         fps = master_args["fps"]
 
         #@markdown **Save & Display Settings**
@@ -1130,7 +1132,7 @@ def main():
             'ffmpeg', '-i', f'{anim_args.video_init_path}', 
             '-vf', f'{vf}', '-vsync', 'vfr', '-q:v', '2', 
             '-loglevel', 'error', '-stats',  
-            os.path.join(video_in_frame_path, '%04d.jpg')
+            os.path.join(video_in_frame_path, '%04d.png')
         ], stdout=subprocess.PIPE).stdout.decode('utf-8')
 
         # determine max frames from length of input frames
@@ -1308,14 +1310,15 @@ def main():
             audio_path = args.audio_path
 
         # make video
-        cmd = [
+        cmd_args = [
             'ffmpeg',
+            '-hide_banner',
             '-y',
             '-vcodec', 'png',
             '-r', str(fps),
             '-start_number', str(0),
             '-i', image_path,
-            '-i', audio_path,
+            f'-i {audio_path}' if audio_path else None,
             '-frames:v', max_frames,
             '-c:v', 'libx264',
             '-vf',
@@ -1325,6 +1328,10 @@ def main():
             '-shortest',
             mp4_path
         ]
+
+        cmd = [i for i in cmd_args if i is not None]
+
+        print(" ".join(cmd));
         process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
         if process.returncode != 0:

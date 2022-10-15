@@ -58,7 +58,7 @@
     "sampling_mode":"bicubic",
     "save_depth_maps":false,
     "audio_path": "",
-    "video_init_path":"./input/video_in.mp4",
+    "video_init_path":"",
     "extract_nth_frame":1,
     "interpolate_key_frames":true,
     "interpolate_x_frames":100,
